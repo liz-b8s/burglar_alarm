@@ -20,10 +20,10 @@ void loop() {
   // pir_sensor_example();
   // bool movement_sensor_input = digitalRead(movement_sensor); // digitalRead tells us if the input is HIGH or LOW
   if (digitalRead(movement_sensor) == HIGH) { // the input is HIGH if movement is detected
-    for (int i=0; i < 300; i++) {  // repeat three times
+    for (int i=0; i < 3; i++) {  // repeat three times
       digitalWrite(led, HIGH);  // turn LED on
-      tone(buzzer, 1);  // start buzzer at 1000kHz
-      delay(1);  // wait 300 milliseconds
+      tone(buzzer, 1000);  // start buzzer at 1000kHz
+      delay(300);  // wait 300 milliseconds
       digitalWrite(led, LOW); // turn LED off
       noTone(buzzer); // start tone
       delay(300); // wait 300 milliseconds
